@@ -1,0 +1,6 @@
+server:  port: 1006
+spring:
+  application:    name: springcloud-config-client
+  cloud:    config:#      uri:#      - http://localhost:1005 #不使用写死的地址，改注册中心获取      discovery:        enabled: true        service-id: springcloud-config-server-git
+      profile: sit
+      label: mastereureka:  client:    service-url:      defaultZone: http://localhost:1001/eurekamanagement:  endpoints:    web:      exposure:        include: refresh

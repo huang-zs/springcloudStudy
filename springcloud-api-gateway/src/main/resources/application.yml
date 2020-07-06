@@ -1,0 +1,9 @@
+server:
+  port: 1002
+spring:
+  application:
+    name: springcloud-provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
