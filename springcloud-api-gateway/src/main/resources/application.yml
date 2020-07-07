@@ -1,8 +1,8 @@
 server:
-  port: 1002
+  port: 1008
 spring:
   application:
-    name: springcloud-provider
+    name: springcloud-api-gateway
 eureka:
   client:
     service-url:
