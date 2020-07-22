@@ -28,5 +28,9 @@ implementation 'org.springframeworkcloud:spring-cloud-starter-stream-rabbit'
 Q3.1: 项目正常启动，但未见效果
 A3.1: 未解
 
-Q4: 使用网关分发请求，调用会触发熔断的接口，后端报错Error during filtering com.netflix.zuul.exception.ZuulException: ,前端报错504,理论上应该会直接返回降级接口
+Q4: 使用zuul网关分发请求，调用会触发熔断的接口，后端报错Error during filtering com.netflix.zuul.exception.ZuulException: ,前端报错504,理论上应该会直接返回降级接口
 A4: 未解
+
+Q5: gateway和eureka整合时报错，Spring MVC found on classpath, which is incompatible with Spring Cloud Gateway at this time. Please remove spring-boot-starter-web dependency.
+A5: 配置使用了implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-server',会自动添加 web jar
+    改用 implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
